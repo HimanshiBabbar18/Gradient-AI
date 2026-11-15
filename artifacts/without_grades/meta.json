@@ -1,0 +1,281 @@
+{
+  "scenario": "without_grades",
+  "dataset": "por",
+  "selected_features": [
+    "failures",
+    "absences",
+    "school",
+    "higher",
+    "Medu",
+    "age",
+    "goout",
+    "Fedu",
+    "Mjob",
+    "studytime",
+    "health",
+    "famrel",
+    "reason",
+    "Walc",
+    "freetime",
+    "Dalc",
+    "Fjob",
+    "schoolsup",
+    "guardian",
+    "traveltime"
+  ],
+  "features": [
+    {
+      "name": "failures",
+      "label": "Past class failures",
+      "help": "Number of past failures (3 means 3 or more)",
+      "type": "numeric",
+      "min": 0,
+      "max": 3,
+      "default": 0
+    },
+    {
+      "name": "absences",
+      "label": "Number of school absences",
+      "help": "0-93",
+      "type": "numeric",
+      "min": 0,
+      "max": 32,
+      "default": 2
+    },
+    {
+      "name": "school",
+      "label": "School",
+      "help": "GP = Gabriel Pereira, MS = Mousinho da Silveira",
+      "type": "categorical",
+      "options": [
+        "GP",
+        "MS"
+      ],
+      "default": "GP"
+    },
+    {
+      "name": "higher",
+      "label": "Wants higher education",
+      "help": "Wants to take higher education",
+      "type": "categorical",
+      "options": [
+        "no",
+        "yes"
+      ],
+      "default": "yes"
+    },
+    {
+      "name": "Medu",
+      "label": "Mother's education",
+      "help": "0 none, 1 primary, 2 5th-9th grade, 3 secondary, 4 higher",
+      "type": "numeric",
+      "min": 0,
+      "max": 4,
+      "default": 2
+    },
+    {
+      "name": "age",
+      "label": "Age",
+      "help": "Student age (15-22)",
+      "type": "numeric",
+      "min": 15,
+      "max": 22,
+      "default": 17
+    },
+    {
+      "name": "goout",
+      "label": "Going out with friends",
+      "help": "1 very low ... 5 very high",
+      "type": "numeric",
+      "min": 1,
+      "max": 5,
+      "default": 3
+    },
+    {
+      "name": "Fedu",
+      "label": "Father's education",
+      "help": "0 none, 1 primary, 2 5th-9th grade, 3 secondary, 4 higher",
+      "type": "numeric",
+      "min": 0,
+      "max": 4,
+      "default": 2
+    },
+    {
+      "name": "Mjob",
+      "label": "Mother's job",
+      "help": "teacher / health / services / at_home / other",
+      "type": "categorical",
+      "options": [
+        "at_home",
+        "health",
+        "other",
+        "services",
+        "teacher"
+      ],
+      "default": "other"
+    },
+    {
+      "name": "studytime",
+      "label": "Weekly study time",
+      "help": "1 <2 h, 2 2-5 h, 3 5-10 h, 4 >10 h",
+      "type": "numeric",
+      "min": 1,
+      "max": 4,
+      "default": 2
+    },
+    {
+      "name": "health",
+      "label": "Current health status",
+      "help": "1 very bad ... 5 very good",
+      "type": "numeric",
+      "min": 1,
+      "max": 5,
+      "default": 4
+    },
+    {
+      "name": "famrel",
+      "label": "Family relationship quality",
+      "help": "1 very bad ... 5 excellent",
+      "type": "numeric",
+      "min": 1,
+      "max": 5,
+      "default": 4
+    },
+    {
+      "name": "reason",
+      "label": "Reason for choosing school",
+      "help": "home / reputation / course / other",
+      "type": "categorical",
+      "options": [
+        "course",
+        "home",
+        "other",
+        "reputation"
+      ],
+      "default": "course"
+    },
+    {
+      "name": "Walc",
+      "label": "Weekend alcohol use",
+      "help": "1 very low ... 5 very high",
+      "type": "numeric",
+      "min": 1,
+      "max": 5,
+      "default": 2
+    },
+    {
+      "name": "freetime",
+      "label": "Free time after school",
+      "help": "1 very low ... 5 very high",
+      "type": "numeric",
+      "min": 1,
+      "max": 5,
+      "default": 3
+    },
+    {
+      "name": "Dalc",
+      "label": "Workday alcohol use",
+      "help": "1 very low ... 5 very high",
+      "type": "numeric",
+      "min": 1,
+      "max": 5,
+      "default": 1
+    },
+    {
+      "name": "Fjob",
+      "label": "Father's job",
+      "help": "teacher / health / services / at_home / other",
+      "type": "categorical",
+      "options": [
+        "at_home",
+        "health",
+        "other",
+        "services",
+        "teacher"
+      ],
+      "default": "other"
+    },
+    {
+      "name": "schoolsup",
+      "label": "Extra school support",
+      "help": "Extra educational support from school",
+      "type": "categorical",
+      "options": [
+        "no",
+        "yes"
+      ],
+      "default": "no"
+    },
+    {
+      "name": "guardian",
+      "label": "Guardian",
+      "help": "mother / father / other",
+      "type": "categorical",
+      "options": [
+        "father",
+        "mother",
+        "other"
+      ],
+      "default": "mother"
+    },
+    {
+      "name": "traveltime",
+      "label": "Home-to-school travel time",
+      "help": "1 <15 min, 2 15-30 min, 3 30-60 min, 4 >1 hour",
+      "type": "numeric",
+      "min": 1,
+      "max": 4,
+      "default": 1
+    }
+  ],
+  "class_names": [
+    "Needs Improvement",
+    "Good",
+    "Excellent"
+  ],
+  "best_hyperparameters": {
+    "n_layers": 3,
+    "units": 16,
+    "dropout": 0.1,
+    "l2": 0.001,
+    "lr": 0.01,
+    "batch_size": 64,
+    "activation": "elu"
+  },
+  "test_metrics": {
+    "DNN (Keras)": {
+      "accuracy": 0.5461538461538461,
+      "precision_macro": 0.5020089260235822,
+      "recall_macro": 0.5565323565323564,
+      "f1_macro": 0.4987512438038378,
+      "f1_weighted": 0.5528885494325652,
+      "roc_auc_ovr": 0.7142407787307453
+    },
+    "Logistic Regression": {
+      "accuracy": 0.47692307692307695,
+      "precision_macro": 0.4589478029194341,
+      "recall_macro": 0.5246642246642247,
+      "f1_macro": 0.44910479314310764,
+      "f1_weighted": 0.4853422377129283,
+      "roc_auc_ovr": 0.6682844515202375
+    },
+    "Random Forest": {
+      "accuracy": 0.5,
+      "precision_macro": 0.4644230769230769,
+      "recall_macro": 0.5277167277167277,
+      "f1_macro": 0.46411234764175946,
+      "f1_weighted": 0.5130194447841507,
+      "roc_auc_ovr": 0.697131226261661
+    },
+    "Gradient Boosting": {
+      "accuracy": 0.6153846153846154,
+      "precision_macro": 0.4806349206349207,
+      "recall_macro": 0.43522588522588523,
+      "f1_macro": 0.44300190330366734,
+      "f1_weighted": 0.5860179566517887,
+      "roc_auc_ovr": 0.6977084899492926
+    }
+  },
+  "n_train": 519,
+  "n_test": 130
+}

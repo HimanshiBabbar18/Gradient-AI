@@ -1,0 +1,110 @@
+{
+  "scenario": "with_grades",
+  "dataset": "por",
+  "selected_features": [
+    "G2",
+    "G1",
+    "failures",
+    "school",
+    "absences"
+  ],
+  "features": [
+    {
+      "name": "G2",
+      "label": "Second period grade (G2)",
+      "help": "0-20",
+      "type": "numeric",
+      "min": 0,
+      "max": 19,
+      "default": 11
+    },
+    {
+      "name": "G1",
+      "label": "First period grade (G1)",
+      "help": "0-20",
+      "type": "numeric",
+      "min": 0,
+      "max": 19,
+      "default": 11
+    },
+    {
+      "name": "failures",
+      "label": "Past class failures",
+      "help": "Number of past failures (3 means 3 or more)",
+      "type": "numeric",
+      "min": 0,
+      "max": 3,
+      "default": 0
+    },
+    {
+      "name": "school",
+      "label": "School",
+      "help": "GP = Gabriel Pereira, MS = Mousinho da Silveira",
+      "type": "categorical",
+      "options": [
+        "GP",
+        "MS"
+      ],
+      "default": "GP"
+    },
+    {
+      "name": "absences",
+      "label": "Number of school absences",
+      "help": "0-93",
+      "type": "numeric",
+      "min": 0,
+      "max": 32,
+      "default": 2
+    }
+  ],
+  "class_names": [
+    "Needs Improvement",
+    "Good",
+    "Excellent"
+  ],
+  "best_hyperparameters": {
+    "n_layers": 3,
+    "units": 32,
+    "dropout": 0.1,
+    "l2": 0.01,
+    "lr": 0.001,
+    "batch_size": 64,
+    "activation": "elu"
+  },
+  "test_metrics": {
+    "DNN (Keras)": {
+      "accuracy": 0.8923076923076924,
+      "precision_macro": 0.8812408986894112,
+      "recall_macro": 0.8455433455433455,
+      "f1_macro": 0.8619315346890097,
+      "f1_weighted": 0.8914949604446154,
+      "roc_auc_ovr": 0.960891038077493
+    },
+    "Logistic Regression": {
+      "accuracy": 0.8615384615384616,
+      "precision_macro": 0.8110418110418111,
+      "recall_macro": 0.8816239316239316,
+      "f1_macro": 0.83935450900228,
+      "f1_weighted": 0.8648251858213334,
+      "roc_auc_ovr": 0.9651334456142148
+    },
+    "Random Forest": {
+      "accuracy": 0.8923076923076924,
+      "precision_macro": 0.8613240418118467,
+      "recall_macro": 0.875946275946276,
+      "f1_macro": 0.8681838464970996,
+      "f1_weighted": 0.8925136443208732,
+      "roc_auc_ovr": 0.9620444814382941
+    },
+    "Gradient Boosting": {
+      "accuracy": 0.8923076923076924,
+      "precision_macro": 0.8918518518518518,
+      "recall_macro": 0.828998778998779,
+      "f1_macro": 0.8547860523519754,
+      "f1_weighted": 0.8888423273818812,
+      "roc_auc_ovr": 0.9674232586439945
+    }
+  },
+  "n_train": 519,
+  "n_test": 130
+}
